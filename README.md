@@ -1,7 +1,7 @@
 <<<<<<< HEAD
 # Projet Python Groupe
 
-Ce projet est réalisé en collaboration entre :
+Ce projet est réalisé par :
 
 Mehdi MEBARKIA
 Nadjib BENSGHIR
