@@ -3,6 +3,6 @@
 
 Ce projet est réalisé par :
 
-Mehdi MEBARKIA
-Nadjib BENSGHIR
-Aymen BOUZERKOUNE
+- **Mehdi MEBARKIA**
+- **Nadjib BENSGHIR**
+- **Aymen BOUZERKOUNE**
