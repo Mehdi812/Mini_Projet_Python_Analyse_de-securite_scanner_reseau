@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Projet Python Groupe
 
 Ce projet est réalisé par :
