@@ -1,5 +1,3 @@
-from src import *
-
 
 def main():
     print("Bienvenue dans le projet Python")
