@@ -3,7 +3,7 @@
 Ce projet est réalisé par :
 
 - **Mehdi MEBARKIA**
-- **Nadjib BENSGHIR**
+- **Nadjib BENSEGHIR**
 - **Aymen BOUZERKOUNE**
 
 ## Description
@@ -33,3 +33,9 @@ execution script generate_fake_log.py pour genere un fichier de log sinon on vou
 - Isolation des adresses IP sources
 - Stockage sous forme de dictionnaire (IP → nombre d’occurrences) et de dictionnaire (IP → User-Agent(s))
 - Détection de bots et scanners via le User-Agent
+### 2. Analyse et visualisation (`data_analyzer.py`)
+- Conversion des résultats en DataFrame pandas
+- Classement des IPs par activité
+- Génération d’un graphique à barres (Top 5)
+- Détection automatique de bots via User-Agent
+- Export en CSV et rapport HTML synthétique avec résumé et graphique
