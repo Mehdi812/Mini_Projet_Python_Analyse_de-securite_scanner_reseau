@@ -25,7 +25,7 @@ Ce projet permet d’analyser des fichiers de logs pour identifier des activité
 ## Architecture et démarche technique
 
 ### 1. Génération d'un ficheir de logs
-execution script generate_fake_log.py pour genere un fichier de log sinon on vous livre un fichier pour tester 
+Le script d'exécution generate_fake_log.py permet de générer un fichier de log, sinon un fichier vous sera fourni pour effectuer les tests.
 
 ### 2. Analyse des logs (`log_parser.py`)
 - Lecture d’un fichier log (format personnalisé ou standard)
