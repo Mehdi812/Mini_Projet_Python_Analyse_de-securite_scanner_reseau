@@ -106,7 +106,7 @@ Générez un fichier de logs (optionnel, en utilisant un script generate_test_lo
 Lancez l’analyse et le scan :
 
 ```bash
-python main.py --logfile logs.txt --scan --verbose --detect 10
+python main.py --logfile web_access --scan --verbose --detect 10
 
 --logfile : préciser le fichier log
 --scan : activer le scan réseau
