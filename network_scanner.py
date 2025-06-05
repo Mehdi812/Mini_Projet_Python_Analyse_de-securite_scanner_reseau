@@ -11,7 +11,7 @@ def scan_port(ip, port, verbose=False):
         return port, True
     else:
         if verbose:
-            print(f'{ip}:{port} - FermÃ©')
+            print(f'{ip}:{port} - Fermé')
         return port, False
 
 def scan_ports(ip, ports, verbose=False):
