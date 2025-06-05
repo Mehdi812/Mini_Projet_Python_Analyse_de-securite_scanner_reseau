@@ -83,6 +83,7 @@ Une liste dans le rapport HTML, par exemple :
     <li>192.168.1.10</li>
     <li>192.168.1.11</li>
 </ul>
+```
 
 ### 3. Ports ouverts / fermés
 Pour chaque IP suspecte, le rapport indique les ports ouverts et fermés :
