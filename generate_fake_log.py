@@ -1,9 +1,9 @@
 import random
 from datetime import datetime
 
-#    Génère un fichier de logs web avec 100 lignes
+#    Génère un fichier de logs web avec 65 lignes
 #    Une liste @IP, URLs, de codes de statut HTTP et d'agents utilisateurs est définie.
-def generate_web_logs(filename="web_access.log", n=100):
+def generate_web_logs(filename="web_access.log", n=65):
     ips = ["192.168.1.10", "203.0.113.5", "198.51.100.23", "192.0.2.45", "192.168.1.11"]
     urls = ["/index.html", "/notfound.html", "/login", "/admin", "/contact", "/robots.txt"]
     codes = ["200", "404", "403", "500"]
