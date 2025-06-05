@@ -74,7 +74,7 @@ Un graphique en barres montre les 5 IPs les plus actives :
 
 ![Top IPs](top_ips_bargraph.png)
 
-Un graphique en Pie Chart pour voir d'un autre point de vue notre data /
+Un graphique en Pie Chart pour voir d'un autre point de vue notre data :
 
 ![Top IPs](top_ips_piechart.png)
 
