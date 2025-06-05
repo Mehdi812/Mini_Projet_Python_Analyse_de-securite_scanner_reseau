@@ -32,8 +32,8 @@ def analyze_data(ip_counts, user_agent_data, ports_scan_results, top_n=5):
     plt.figure(figsize=(10,6))
     plt.bar(top_ips['IP'], top_ips['Occurrences'])
     plt.xlabel('IP Address')
-    plt.ylabel('Number of Attempts')
-    plt.title('Top IPs by activity')
+    plt.ylabel('nombre de tentatives')
+    plt.title('Top IPs')
     plt.tight_layout()
     plt.savefig('top_ips_bargraph.png')  # Sauvegarde du graphique
     plt.show()
