@@ -28,15 +28,24 @@ def analyze_data(ip_counts, user_agent_data, ports_scan_results, top_n=5):
             'closed_ports': ports_scan_results.get(ip, {}).get('closed', [])
         }
     
-    # Générer la visualisation graphique
+    # Générer le graphique en barres
     plt.figure(figsize=(10,6))
     plt.bar(top_ips['IP'], top_ips['Occurrences'])
     plt.xlabel('IP Address')
-    plt.ylabel('nombre de tentatives')
-    plt.title('Top IPs')
+    plt.ylabel('Number of Attempts')
+    plt.title('Top IPs by activity')
     plt.tight_layout()
     plt.savefig('top_ips_bargraph.png')  # Sauvegarde du graphique
     plt.show()
+    
+    # --- Ajout du graphique en secteur (pie chart) ---
+    # Vérifier qu'il y a au moins une entrée
+    if not top_ips.empty:
+        plt.figure(figsize=(8,8))
+        plt.pie(top_ips['Occurrences'], labels=top_ips['IP'], autopct='%1.1f%%', startangle=140, colors=plt.cm.tab10.colors)
+        plt.title('Répartition des top IPs (Pie Chart)')
+        plt.savefig('top_ips_piechart.png')  # Sauvegarde du pie chart
+        plt.show()
 
     # Génération du rapport HTML
     html_content = "<html><head><title>Rapport d'analyse</title></head><body>"
@@ -59,9 +68,11 @@ def analyze_data(ip_counts, user_agent_data, ports_scan_results, top_n=5):
         html_content += "<b>Ports ouverts:</b> " + (', '.join(map(str, open_ports)) if open_ports else 'Aucun') + "<br>"
         html_content += "<b>Ports fermés:</b> " + (', '.join(map(str, closed_ports)) if closed_ports else 'Aucun') + "<br>"
 
-    # Ajout de l'image du graphique dans le HTML
-    html_content += '<h2>Graphique : Top IPs</h2>'
+    # Ajout des images dans le HTML
+    html_content += '<h2>Graphique : Top IPs (Barres)</h2>'
     html_content += '<img src="top_ips_bargraph.png" alt="Graphique Top IPs">'
+    html_content += '<h2>Distribution des Top IPs (Secteur)</h2>'
+    html_content += '<img src="top_ips_piechart.png" alt="Pie Chart Top IPs">'
 
     # Enregistrement HTML
     with open('full_ip_analysis_report.html', 'w') as f:
